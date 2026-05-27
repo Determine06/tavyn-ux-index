@@ -37,13 +37,7 @@ export function SignUpV002() {
         >
           <div className="px-8 pt-8">
             <div className="text-center">
-              <h1
-                className={
-                  hasEmail
-                    ? "text-[24px] font-normal leading-8 tracking-normal"
-                    : "text-[24px] font-semibold leading-8 tracking-normal"
-                }
-              >
+              <h1 className="text-[24px] font-semibold leading-8 tracking-normal">
                 Sign In or Create an Account
               </h1>
               <p className="mx-auto mt-2 w-[382px] max-w-full text-center text-[14px] font-normal leading-5 text-[#4a5565]">
