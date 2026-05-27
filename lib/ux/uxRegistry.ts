@@ -21,6 +21,12 @@ export const signUpVersions = [
       "Figma-derived sign-in flow with animated work email and password states."
   },
   {
+    label: "v003",
+    href: "/ux/sign-up/v003",
+    description:
+      "Google-first account creation flow with a quieter email path and preview workflow context."
+  },
+  {
     label: "final",
     href: "/ux/sign-up/final",
     description: "Selected sign-up direction. Currently mirrors v001."
