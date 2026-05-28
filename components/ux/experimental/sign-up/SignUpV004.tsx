@@ -43,14 +43,13 @@ export function SignUpV004() {
       <section className="flex w-full max-w-[760px] flex-col items-center">
         <div className="w-full text-center">
           <h1 className="whitespace-nowrap text-[45px] font-semibold leading-[52px] tracking-normal">
-            Create your{" "}
+            Get started with{" "}
             <span
               className="bg-clip-text text-transparent"
               style={{ backgroundImage: gradient }}
             >
               Tavyn
-            </span>{" "}
-            account
+            </span>
           </h1>
           <p className="mx-auto mt-2 w-[382px] max-w-full text-center text-[14px] font-normal leading-5 tracking-normal text-[#4a5565]">
             Start publishing high quality blogs today
@@ -58,12 +57,8 @@ export function SignUpV004() {
         </div>
 
         <div className="relative mt-8 w-full max-w-[448px]">
-          <div
-            className="absolute -inset-x-8 -inset-y-6 rounded-[32px] opacity-20 blur-3xl"
-            style={{ backgroundImage: gradient }}
-          />
           <motion.div
-          className="relative w-full overflow-hidden rounded-[16px] border border-[#e5e7eb] bg-white shadow-[0px_1px_1.5px_rgba(0,0,0,0.1),0px_1px_1px_rgba(0,0,0,0.1)]"
+          className="relative w-full overflow-hidden rounded-[16px] border border-[#e5e7eb] bg-white shadow-[0_1px_0_rgba(255,255,255,0.9)_inset,0_2px_3px_rgba(17,24,39,0.06),0_18px_44px_rgba(17,24,39,0.12)]"
             animate={{ height: cardHeight }}
             transition={spring}
           >
