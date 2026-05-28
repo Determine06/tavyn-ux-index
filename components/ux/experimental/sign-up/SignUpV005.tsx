@@ -10,8 +10,7 @@ const steps = [
   "Create your account",
   "Learn your company",
   "Validate your GitHub snapshot",
-  "Preview your first blog",
-  "Open a pull request"
+  "Preview your first blog"
 ];
 
 export function SignUpV005() {
@@ -24,28 +23,31 @@ export function SignUpV005() {
 
   return (
     <main className="min-h-screen bg-white font-['Montserrat',ui-sans-serif,system-ui,sans-serif] text-[#101014]">
-      <div className="grid min-h-screen grid-cols-1 lg:grid-cols-2">
+      <div className="grid min-h-screen grid-cols-1 lg:grid-cols-[0.98fr_1.02fr]">
         <motion.section
-          className="flex min-h-screen items-center justify-center bg-[#fbfaf8] px-6 py-10 sm:px-10 lg:py-14"
+          className="flex min-h-screen items-center justify-center bg-white px-6 py-10 sm:px-10 lg:py-14"
           initial={{ opacity: 0, y: 14 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.42, ease: [0.22, 1, 0.36, 1] }}
         >
-          <div className="w-full max-w-[500px]">
-            <BrandMark />
+          <div className="w-full max-w-[590px]">
+            <div className="mb-20">
+              <BrandMark />
+            </div>
 
-            <div className="mt-16 text-center sm:mt-20 lg:mt-24">
-              <h1 className="text-[38px] font-semibold leading-[46px] tracking-[-0.02em] text-[#0f1014] sm:text-[44px] sm:leading-[52px]">
+            <div className="text-center">
+              <h1 className="text-[40px] font-semibold leading-[48px] tracking-[-0.02em] text-[#0f1014]">
                 Sign Up Account
               </h1>
-              <p className="mx-auto mt-4 max-w-[460px] text-[17px] font-normal leading-7 text-[#5d6677]">
-                Create your Tavyn account to preview your first blog workflow.
+              <p className="mx-auto mt-5 max-w-[520px] text-[18px] font-normal leading-7 text-[#5d6677]">
+                Create your Tavyn account to start a controlled blog publishing
+                workflow.
               </p>
             </div>
 
-            <div className="mt-12">
+            <div className="mt-16">
               <button
-                className="flex h-[68px] w-full items-center justify-center gap-3 rounded-[16px] border border-[#d8d0c8] bg-white text-[18px] font-semibold leading-6 text-[#171717] shadow-[0_16px_42px_rgba(17,24,39,0.08)] transition duration-200 hover:-translate-y-px hover:border-[#f05a22] hover:shadow-[0_20px_52px_rgba(240,90,34,0.12)] active:translate-y-0 active:scale-[0.99] disabled:cursor-not-allowed disabled:opacity-80"
+                className="flex h-[76px] w-full items-center justify-center gap-4 rounded-[18px] border border-[#2b2b2b] bg-white text-[20px] font-semibold leading-6 text-[#171717] transition duration-200 hover:-translate-y-px hover:border-[#f05a22] hover:shadow-[0_20px_52px_rgba(240,90,34,0.12)] active:translate-y-0 active:scale-[0.99] disabled:cursor-not-allowed disabled:opacity-80"
                 disabled={loading}
                 type="button"
                 onClick={handleGoogleClick}
@@ -55,18 +57,30 @@ export function SignUpV005() {
               </button>
             </div>
 
-            <div className="my-8 flex items-center gap-5">
-              <div className="h-px flex-1 bg-[#e6dfd8]" />
-              <span className="text-[14px] font-medium text-[#7a8393]">Or</span>
-              <div className="h-px flex-1 bg-[#e6dfd8]" />
+            <div className="my-10 flex items-center gap-6">
+              <div className="h-px flex-1 bg-[#d8d8d8]" />
+              <span className="text-[16px] font-medium text-[#6b7280]">Or</span>
+              <div className="h-px flex-1 bg-[#d8d8d8]" />
             </div>
 
-            <p className="text-center text-[13px] leading-6 text-[#6b7280]">
+            <div className="grid gap-6">
+              <LabelledInput label="Company website" placeholder="eg. tavyn.ai" />
+              <LabelledInput label="Work email" placeholder="eg. founder@company.com" />
+            </div>
+
+            <button
+              className="mt-10 flex h-[72px] w-full items-center justify-center rounded-[18px] bg-[#111111] text-[18px] font-semibold text-white shadow-[0_18px_46px_rgba(17,17,17,0.16)] transition hover:bg-black active:scale-[0.99]"
+              type="button"
+            >
+              Sign Up
+            </button>
+
+            <p className="mt-8 text-center text-[14px] leading-6 text-[#6b7280]">
               No GitHub access yet. Tavyn only asks for repo permissions when
               you&apos;re ready to generate a real publishing preview.
             </p>
 
-            <p className="mt-10 text-center text-[13px] leading-5 text-[#737b8c]">
+            <p className="mt-8 text-center text-[14px] leading-6 text-[#737b8c]">
               By continuing, you agree to our{" "}
               <span className="font-medium text-[#3f4654] underline underline-offset-2">
                 Terms
@@ -78,7 +92,7 @@ export function SignUpV005() {
               .
             </p>
 
-            <p className="mt-8 text-center text-[15px] leading-6 text-[#5d6677]">
+            <p className="mt-8 text-center text-[16px] leading-6 text-[#5d6677]">
               Already have an account?{" "}
               <button
                 className="font-semibold text-[#15171c] underline-offset-4 transition hover:underline"
@@ -119,8 +133,8 @@ export function SignUpV005() {
                 Get started with Tavyn
               </h2>
               <p className="mx-auto mt-5 max-w-[420px] text-[18px] leading-8 text-white/82">
-                Complete the setup once. Tavyn handles the repetitive blog work
-                after that.
+                Complete these steps to turn your site and GitHub repo into a
+                safe publishing preview.
               </p>
             </div>
 
@@ -129,8 +143,8 @@ export function SignUpV005() {
                 <motion.div
                   className={
                     index === 0
-                      ? "flex items-center gap-5 rounded-[14px] bg-white px-6 py-5 text-left text-[#101014] shadow-[0_18px_50px_rgba(0,0,0,0.22)]"
-                      : "flex items-center gap-5 rounded-[14px] bg-black/32 px-6 py-5 text-left text-white backdrop-blur-md"
+                        ? "flex items-center gap-5 rounded-[14px] bg-white px-6 py-5 text-left text-[#101014] shadow-[0_18px_50px_rgba(0,0,0,0.22)]"
+                      : "flex items-center gap-5 rounded-[14px] bg-black/26 px-6 py-5 text-left text-white backdrop-blur-md"
                   }
                   key={step}
                   initial={{ opacity: 0, y: 10 }}
@@ -195,6 +209,27 @@ function BrandMark() {
         Tavyn
       </span>
     </div>
+  );
+}
+
+function LabelledInput({
+  label,
+  placeholder
+}: {
+  label: string;
+  placeholder: string;
+}) {
+  return (
+    <label className="block">
+      <span className="text-[17px] font-semibold leading-6 text-[#171717]">
+        {label}
+      </span>
+      <input
+        className="mt-3 h-[76px] w-full rounded-[18px] border border-[#e5e2de] bg-[#f5f3f0] px-6 text-[18px] text-[#171717] outline-none transition placeholder:text-[#7c7c7c] focus:border-[#f05a22] focus:bg-white"
+        placeholder={placeholder}
+        type="text"
+      />
+    </label>
   );
 }
 
