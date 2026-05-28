@@ -40,9 +40,9 @@ export function SignUpV004() {
     >
       <BrandMark />
 
-      <section className="flex w-full max-w-[448px] flex-col items-center">
+      <section className="flex w-full max-w-[760px] flex-col items-center">
         <div className="w-full text-center">
-          <h1 className="text-[45px] font-semibold leading-[52px] tracking-normal">
+          <h1 className="whitespace-nowrap text-[45px] font-semibold leading-[52px] tracking-normal">
             Create your{" "}
             <span
               className="bg-clip-text text-transparent"
@@ -57,11 +57,16 @@ export function SignUpV004() {
           </p>
         </div>
 
-        <motion.div
-          className="relative mt-8 w-full overflow-hidden rounded-[16px] border border-[#e5e7eb] bg-white shadow-[0px_1px_1.5px_rgba(0,0,0,0.1),0px_1px_1px_rgba(0,0,0,0.1)]"
-          animate={{ height: cardHeight }}
-          transition={spring}
-        >
+        <div className="relative mt-8 w-full max-w-[448px]">
+          <div
+            className="absolute -inset-x-8 -inset-y-6 rounded-[32px] opacity-20 blur-3xl"
+            style={{ backgroundImage: gradient }}
+          />
+          <motion.div
+          className="relative w-full overflow-hidden rounded-[16px] border border-[#e5e7eb] bg-white shadow-[0px_1px_1.5px_rgba(0,0,0,0.1),0px_1px_1px_rgba(0,0,0,0.1)]"
+            animate={{ height: cardHeight }}
+            transition={spring}
+          >
           <div className="px-8 pt-8">
             <div
               className="rounded-[14px] p-[2px] shadow-[0_10px_24px_rgba(255,72,0,0.1)]"
@@ -175,7 +180,8 @@ export function SignUpV004() {
               </p>
             </div>
           </motion.div>
-        </motion.div>
+          </motion.div>
+        </div>
       </section>
     </motion.main>
   );
