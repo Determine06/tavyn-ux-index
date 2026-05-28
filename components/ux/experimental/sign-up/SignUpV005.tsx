@@ -25,16 +25,16 @@ export function SignUpV005() {
     <main className="min-h-screen bg-white font-['Montserrat',ui-sans-serif,system-ui,sans-serif] text-[#101014]">
       <div className="grid min-h-screen grid-cols-1 lg:grid-cols-[0.98fr_1.02fr]">
         <motion.section
-          className="flex min-h-screen items-center justify-center bg-white px-6 py-8 sm:px-10 lg:py-8"
+          className="relative flex min-h-screen items-center justify-center bg-white px-6 py-8 sm:px-10 lg:py-8"
           initial={{ opacity: 0, y: 14 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.42, ease: [0.22, 1, 0.36, 1] }}
         >
-          <div className="w-full max-w-[460px]">
-            <div className="mb-10">
-              <BrandMark />
-            </div>
+          <div className="absolute left-6 top-6 sm:left-10 sm:top-8">
+            <BrandMark />
+          </div>
 
+          <div className="w-full max-w-[460px]">
             <div className="text-center">
               <h1 className="text-[30px] font-semibold leading-9 tracking-[-0.02em] text-[#0f1014]">
                 Sign Up Account
@@ -64,8 +64,16 @@ export function SignUpV005() {
             </div>
 
             <div className="grid gap-4">
-              <LabelledInput label="Company website" placeholder="eg. tavyn.ai" />
-              <LabelledInput label="Work email" placeholder="eg. founder@company.com" />
+              <LabelledInput
+                label="Email"
+                placeholder="eg. founder@company.com"
+                type="email"
+              />
+              <LabelledInput
+                label="Password"
+                placeholder="Enter your password"
+                type="password"
+              />
             </div>
 
             <button
@@ -75,12 +83,7 @@ export function SignUpV005() {
               Sign Up
             </button>
 
-            <p className="mt-5 text-center text-[12px] leading-5 text-[#6b7280]">
-              No GitHub access yet. Tavyn only asks for repo permissions when
-              you&apos;re ready to generate a real publishing preview.
-            </p>
-
-            <p className="mt-5 text-center text-[12px] leading-5 text-[#737b8c]">
+            <p className="mt-6 text-center text-[12px] leading-5 text-[#737b8c]">
               By continuing, you agree to our{" "}
               <span className="font-medium text-[#3f4654] underline underline-offset-2">
                 Terms
@@ -92,7 +95,7 @@ export function SignUpV005() {
               .
             </p>
 
-            <p className="mt-5 text-center text-[13px] leading-5 text-[#5d6677]">
+            <p className="mt-4 text-center text-[13px] leading-5 text-[#5d6677]">
               Already have an account?{" "}
               <button
                 className="font-semibold text-[#15171c] underline-offset-4 transition hover:underline"
@@ -214,10 +217,12 @@ function BrandMark() {
 
 function LabelledInput({
   label,
-  placeholder
+  placeholder,
+  type
 }: {
   label: string;
   placeholder: string;
+  type: "email" | "password";
 }) {
   return (
     <label className="block">
@@ -227,7 +232,7 @@ function LabelledInput({
       <input
         className="mt-2 h-[54px] w-full rounded-[14px] border border-[#e5e2de] bg-[#f5f3f0] px-4 text-[15px] text-[#171717] outline-none transition placeholder:text-[#7c7c7c] focus:border-[#f05a22] focus:bg-white"
         placeholder={placeholder}
-        type="text"
+        type={type}
       />
     </label>
   );
