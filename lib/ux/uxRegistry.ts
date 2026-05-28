@@ -24,7 +24,7 @@ export const signUpVersions = [
     label: "v003",
     href: "/ux/sign-up/v003",
     description:
-      "Google-first account creation flow with a quieter email path and preview workflow context."
+      "v002-derived account creation flow with a gradient-border Google CTA and load-in animation."
   },
   {
     label: "final",
