@@ -33,6 +33,12 @@ export const signUpVersions = [
       "Top-left compact brand, external headline, and bottom-pinned card trust copy."
   },
   {
+    label: "v005",
+    href: "/ux/sign-up/v005",
+    description:
+      "Premium split-screen Google sign-up with a dark onboarding workflow panel."
+  },
+  {
     label: "final",
     href: "/ux/sign-up/final",
     description: "Selected sign-up direction. Currently mirrors v001."
