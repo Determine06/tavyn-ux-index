@@ -42,8 +42,15 @@ export function SignUpV004() {
 
       <section className="flex w-full max-w-[448px] flex-col items-center">
         <div className="w-full text-center">
-          <h1 className="text-[30px] font-semibold leading-9 tracking-normal">
-            Create your Tavyn account
+          <h1 className="text-[45px] font-semibold leading-[52px] tracking-normal">
+            Create your{" "}
+            <span
+              className="bg-clip-text text-transparent"
+              style={{ backgroundImage: gradient }}
+            >
+              Tavyn
+            </span>{" "}
+            account
           </h1>
           <p className="mx-auto mt-2 w-[382px] max-w-full text-center text-[14px] font-normal leading-5 tracking-normal text-[#4a5565]">
             Start publishing high quality blogs today
