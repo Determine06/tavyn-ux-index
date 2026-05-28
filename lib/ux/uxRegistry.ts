@@ -27,6 +27,12 @@ export const signUpVersions = [
       "v002-derived account creation flow with a gradient-border Google CTA and load-in animation."
   },
   {
+    label: "v004",
+    href: "/ux/sign-up/v004",
+    description:
+      "Top-left compact brand, external headline, and bottom-pinned card trust copy."
+  },
+  {
     label: "final",
     href: "/ux/sign-up/final",
     description: "Selected sign-up direction. Currently mirrors v001."
